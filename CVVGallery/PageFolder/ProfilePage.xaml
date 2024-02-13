@@ -1,0 +1,114 @@
+﻿<Page x:Class="CVVGallery.PageFolder.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CVVGallery.PageFolder"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="965" d:DesignWidth="1920"
+      Title="Профиль"
+      KeyDown="Page_KeyDown"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215"/>
+            <ColumnDefinition Width="215"/>
+            <ColumnDefinition Width="215"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Профиль"
+                   Grid.Column="0" Grid.Row="0" 
+                   FontWeight="Bold"
+                   VerticalContentAlignment="Bottom"
+                   Style="{DynamicResource LabelLogo}"/>
+
+        <Label Content="Вход"
+                   Grid.Column="3" Grid.Row="1" 
+                   FontWeight="Bold"
+                   VerticalContentAlignment="Bottom"
+                   Width="125"
+                   Margin="247,10,583,10"
+                   Style="{DynamicResource LabelLogo}" />
+
+        <TextBox x:Name="LoginTB"
+                    Grid.Column="3" Grid.Row="2"
+                    Style="{DynamicResource TextBox}"
+                    FontFamily="Rubik"
+                    BorderBrush="#48523D"
+                    BorderThickness="2"
+                    Width="355"
+                    Height="60"
+                    FontSize="20"
+                    materialDesign:HintAssist.Hint="Логин"    
+                    materialDesign:HintAssist.FloatingOffset="7,-27"
+                    materialDesign:HintAssist.Background="#E4E8F4"
+                    materialDesign:HintAssist.Foreground="#48523D"
+                    materialDesign:TextFieldAssist.TextFieldCornerRadius="7" 
+                    Margin="140,0,460,0">
+            <TextBox.Resources>
+                <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#48523D"/>
+            </TextBox.Resources>
+        </TextBox>
+
+        <PasswordBox x:Name="PasswordPB"
+                    Grid.Column="3" Grid.Row="4"
+                    Style="{DynamicResource PasswordBox}"
+                    BorderBrush="#48523D"
+                    FontFamily="Rubik"
+                    BorderThickness="2"
+                    Width="355"
+                    Height="60"
+                    FontSize="20"
+                    materialDesign:HintAssist.Hint="Пароль"
+                    materialDesign:HintAssist.FloatingOffset="7,-27"
+                    materialDesign:HintAssist.Background="#E4E8F4"
+                    materialDesign:HintAssist.Foreground="#48523D"
+                    materialDesign:TextFieldAssist.TextFieldCornerRadius="7"
+                    Margin="140,0,460,0">
+            <PasswordBox.Resources>
+                <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#48523D"/>
+            </PasswordBox.Resources>
+        </PasswordBox>
+
+        <Button x:Name="LoginBtn"
+                    Grid.Column="3" Grid.Row="6"
+                    Width="356" Height="50"
+                    Content="Войти"
+                    Foreground="#E4E8F4"
+                    Background="#48523D"
+                    FontSize="30"
+                    FontFamily="Rubik"
+                    Margin="140,0,460,0"
+                    materialDesign:ButtonAssist.CornerRadius="30"
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    BorderBrush="Transparent"
+                    Click="LoginBtn_Click"/>
+
+        <Image x:Name="GoogleIMG"
+                   Source="/ResourceFolder/ImageFolder/google.png" 
+                   Grid.Column="3" Grid.Row="10"
+                   Width="27" Height="27" 
+                   Margin="303,11,625,516"
+                   MouseLeftButtonDown="GoogleIMG_MouseLeftButtonDown"/>
+
+    </Grid>
+</Page>

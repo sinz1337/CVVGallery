@@ -1,0 +1,344 @@
+﻿<Page x:Class="CVVGallery.PageFolder.ArtistsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CVVGallery.PageFolder"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="965" d:DesignWidth="1920"
+      Title="Художники">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="415"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="FilterGrid"
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="ВИД ИССКУСТВА"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="1"
+                   HorizontalAlignment="Left" 
+                   Margin="-3,0,0,0"/>
+
+            <CheckBox x:Name="PaintingCheck"
+                      Content="Живопись"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="2"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="150"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Unchecked="PaintingCheck_Unchecked"
+                      Checked="PaintingCheck_Checked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="228"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="2" 
+                   HorizontalAlignment="Right"/>
+
+            <CheckBox x:Name="AuthorsCheck" 
+                      Content="Авторская графика"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="3"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="220"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="AuthorsCheck_Checked"
+                      Unchecked="AuthorsCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="421"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="3" 
+                   HorizontalAlignment="Right"/>
+
+            <CheckBox x:Name="PrintedCheck" 
+                      Content="Графика печатная"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="4"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="210"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="PrintedCheck_Checked"
+                      Unchecked="PrintedCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="527"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="4" 
+                   HorizontalAlignment="Right"/>
+
+            <Label Content="ТЕХНИКА"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="6"
+                   HorizontalAlignment="Left" 
+                   Margin="-3,0,0,0"/>
+
+            <CheckBox x:Name="CanvasCheck"
+                      Content="Холст, масло"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="7"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="150"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="CanvasCheck_Checked"
+                      Unchecked="CanvasCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="229"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="7" 
+                   HorizontalAlignment="Right"/>
+
+            <CheckBox x:Name="PaperCheck"
+                      Content="Бумага, акрил"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="8"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="170"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="PaperCheck_Checked"
+                      Unchecked="PaperCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="197"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="8" 
+                   HorizontalAlignment="Right"/>
+
+            <CheckBox x:Name="SilkscreenCheck"
+                      Content="Шелкография"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="9"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="170"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="SilkscreenCheck_Checked"
+                      Unchecked="SilkscreenCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="100"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="9" 
+                   HorizontalAlignment="Right"/>
+
+            <Label Content="НАПРАВЛЕНИЕ"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="11"
+                   HorizontalAlignment="Left" 
+                   Margin="-3,0,0,0"/>
+
+            <CheckBox x:Name="AbstractionCheck"
+                      Content="Абстракция"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="12"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="150"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="AbstractionCheck_Checked"
+                      Unchecked="AbstractionCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="402"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="12" 
+                   HorizontalAlignment="Right"/>
+
+            <CheckBox x:Name="FigurativeCheck"
+                      Content="Фигуративное искусство"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="13"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="270"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="FigurativeCheck_Checked"
+                      Unchecked="FigurativeCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="639"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="13" 
+                   HorizontalAlignment="Right"/>
+
+            <CheckBox x:Name="StreeArtCheck"
+                      Content="Стрит-арт"
+                      Style="{StaticResource MaterialDesignCheckBox}"
+                      FontFamily="Rubik"
+                      FontSize="20"
+                      Grid.Row="14"
+                      Foreground="#48523D"
+                      Height="26"
+                      Width="150"
+                      HorizontalAlignment="Left"
+                      materialDesign:HintAssist.Background="#48523D"
+                      Checked="StreeArtCheck_Checked"
+                      Unchecked="StreeArtCheck_Unchecked">
+                <CheckBox.Resources>
+                    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#48523D"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#48523D"/>
+                </CheckBox.Resources>
+            </CheckBox>
+
+            <Label Content="156"
+                   Style="{StaticResource NormalLabel}"
+                   FontSize="20"
+                   Grid.Row="14" 
+                   HorizontalAlignment="Right"/>
+
+        </Grid>
+
+        <Grid x:Name="MainGrid"
+            Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="290"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="290"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Content="Художники"
+                   Grid.Row="1"
+                   HorizontalContentAlignment="Left"
+                   FontWeight="Bold"
+                   FontSize="36"
+                   Style="{StaticResource NormalLabel}"/>
+
+            <Image x:Name="Artist1IMG"
+                   Source="/ResourceFolder/ImageFolder/artist1.png" 
+                   Grid.Row="2"
+                   Width="384" Height="227"/>
+
+            <Image x:Name="Artist1faceIMG"
+                   Source="/ResourceFolder/ImageFolder/artist1face.png" 
+                   Grid.Row="2"
+                   Width="115" Height="115" 
+                   VerticalAlignment="Bottom"
+                   Margin="0,0,240,0"/>
+
+            <TextBlock x:Name="Artist1infoTBlock"
+                Grid.Row="3"
+                Width="110" Height="35"
+                HorizontalAlignment="Left"
+                Style="{StaticResource TextBlock}" 
+                Margin="56,0,0,0">
+                    <Run Text="Попов Платон"
+                         FontSize="16"/>
+                    <LineBreak/>
+                    <Run Text="32 работы"
+                         FontSize="12"/>
+            </TextBlock>
+
+        </Grid>
+    </Grid>
+</Page>
